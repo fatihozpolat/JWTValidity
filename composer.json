@@ -1,0 +1,25 @@
+{
+    "name": "fatihozpolat/jwtvalidity",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FatihOzpolat\\JWTValidity\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FatihOzpolat\\JWTValidity\\Providers\\JWTValidityProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Fatih Özpolat",
+            "email": "fozpolat33@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
