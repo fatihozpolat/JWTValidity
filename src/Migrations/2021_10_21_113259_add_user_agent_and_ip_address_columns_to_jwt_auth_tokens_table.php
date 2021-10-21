@@ -14,8 +14,8 @@ class AddUserAgentAndIpAddressColumnsToJwtAuthTokensTable extends Migration
     public function up()
     {
         Schema::table('jwt_auth_tokens', function (Blueprint $table) {
-            $table->string('ip_address')->nullable();
-            $table->string('user_agent', 500)->nullable();
+            $table->string('ip_address')->after('access_token')->nullable();
+            $table->string('user_agent', 500)->after('access_token')->nullable();
         });
     }
 
