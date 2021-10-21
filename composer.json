@@ -2,6 +2,15 @@
     "name": "fatihozpolat/jwtvalidity",
     "type": "package",
     "license": "MIT",
+    "keywords": [
+        "jwt database",
+        "database storage",
+        "json web token",
+        "auth",
+        "authentication",
+        "jwt",
+        "laravel"
+    ],
     "autoload": {
         "psr-4": {
             "FatihOzpolat\\JWTValidity\\": "src/"
@@ -22,6 +31,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "php": "^7.4",
         "tymon/jwt-auth": "^1.0"
     }
 }
