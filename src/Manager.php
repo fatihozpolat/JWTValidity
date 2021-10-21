@@ -14,7 +14,11 @@ class Manager
      */
     public static function addToken($token): void
     {
-        auth()->user()->tokens()->create(['access_token' => $token]);
+        auth()->user()->tokens()->create([
+            'access_token' => $token,
+            'ip_address' => $_SERVER["HTTP_CF_CONNECTING_IP"] ?? $_SERVER["REMOTE_ADDR"],
+            'user_agent' => $_SERVER["HTTP_USER_AGENT"],
+        ]);
     }
 
     /**

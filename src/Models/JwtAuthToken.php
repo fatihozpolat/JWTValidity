@@ -14,6 +14,8 @@ class JwtAuthToken extends Model
         'tokenable_id',
         'tokenable_type',
         'access_token',
+        'ip_address',
+        'user_agent',
     ];
 
     public function tokenable(): MorphTo
