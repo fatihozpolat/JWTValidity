@@ -40,7 +40,10 @@ class Manager
     {
         if ($model->tokens->count()) {
             foreach ($model->tokens as $token) {
-                JWTAuth::setToken($token->access_token)->invalidate();
+                $jwt = JWTAuth::setToken($token->access_token);
+                if ($jwt->check()) {
+                    $jwt->invalidate();
+                }
                 $token->delete();
             }
             return true;
